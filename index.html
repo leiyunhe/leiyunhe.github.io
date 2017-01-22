@@ -61,6 +61,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DataCompression" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/22/DataCompression/" class="article-date">
+  <time datetime="2017-01-22T07:46:45.000Z" itemprop="datePublished">2017-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/22/DataCompression/">DataCompression</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为什么要进行数据压缩？"><a href="#为什么要进行数据压缩？" class="headerlink" title="为什么要进行数据压缩？"></a>为什么要进行数据压缩？</h1><p>当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数据的存储空间减小，以便能够节省存储空间、快速传递数据。</p>
+<h1 id="如何压缩数据？"><a href="#如何压缩数据？" class="headerlink" title="如何压缩数据？"></a>如何压缩数据？</h1><p>数据压缩实现建立在现实世界数据的统计冗余基础之上。有的字符出现的频率明显更高，也有的字符几乎从不出现，如果采用同样数量的二进制位存储所有的字符，这种平均的方式显然会占用大量的空间。例如，汉语中的“的”比“得”的使用频率更高，而锝（de）出现的可能性显然非常小。这样，就会数据压缩提供了可能。“出现频率高的字尽量用最少的位数编码来表示”。通过这样的重新编码方式，能有效减少数据存储所需要的空间。</p>
+<p>例如，AAASSSDDDDDDFFFFFFF可以表示为A3S3D6F7，原来需要用19个字节表示，而后者仅仅需要8个字节来表示。当最终呈现信息的时候，就可以将A3S3D6F7转换为原始形式输出了。<br>但是，对于文本文件的压缩并不像刚才示例中那样，是同一个字母连续很多次，而是一连串单词，比如I Like Reading通过这种方式压缩以后就是I1L1i1k1e1R1e1a1d1i1n1g1,本来13个字节表示的内容，压缩以后使用了26个字节。因此，这种压缩方法就不能使用。</p>
+<p>于是，人们发现采用“哈夫曼”树进行编码能够有效解决这个问题。哈夫曼编码的特点是，为各个压缩对象分别构造最佳编码，然后以此进行压缩。压缩后的文件既包含压缩编码的规则信息，也包含压缩后的数据。</p>
+<h1 id="数据压缩方法"><a href="#数据压缩方法" class="headerlink" title="数据压缩方法"></a>数据压缩方法</h1><p>朋友在朋友圈分享了个人拍摄的风景照，你觉得可以用到自己的作品中。可是，你发现你从微信朋友圈保存下来的照片清晰度太低，你不得不联系朋友索要原始照片。这是因为，微信中发布的照片通常是经过压缩的，这样可以节省你的流量。否则，现在手机拍出照片通常是几G，发几张照片，一个月的流量就用完了。那多不爽呀。你在上网看电影，看电视剧的时候，通常会有超清、高清、标清等选项，有时候家里网速卡的厉害，你通常会切换到标清选项。电影和电视的画面会变得模糊，但是速度更快了。这是通常数据压缩的方式，损失了一部分的画面信息，但是能够让视频顺畅播放，用数据压缩来解决带宽不足的问题。这些都是有损压缩。</p>
+<h2 id="有损压缩和无损压缩"><a href="#有损压缩和无损压缩" class="headerlink" title="有损压缩和无损压缩"></a>有损压缩和无损压缩</h2><p>无损压缩，是指在压缩以后，不损失原文件的信息。对于图像的表达，采用这种方法更为有效。因为图像的连续像素间具有很大的重复可能性。所以，每个字节用颜色、亮度等进行表示，就能够获得很好的压缩效果。</p>
+<p>但是对于普通的文本文件，更好的压缩方法是对字符代码的编号重新命名。对于出现频次比较高的字母，用较小的二进制数表示，而将出现频次低的数用较大的二进制表示，这样从总体上，可以明显减少存储空间。对于文字的处理，往往是无损压缩。对图像的压缩（包括图片和视频等）可能是有损压缩。但有一个反例，矢量图，采取无损压缩的方式。</p>
+<blockquote>
+<p>参考文献：<br>（日）矢则久雄. 程序是怎么跑起来的[M].98-107<br>维基百科. 数据压缩 </p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://leiyunhe.com/2017/01/22/DataCompression/" data-id="ciy8f1d4h00002wfo2mmbg0x2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机-科普/">计算机 科普</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-essayyingongyuannian" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/14/essayyingongyuannian/" class="article-date">
@@ -95,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://leiyunhe.com/2017/01/14/essayyingongyuannian/" data-id="cixwzzz6f0001cwfoqobbry1r" class="article-share-link">Share</a>
+      <a data-url="http://leiyunhe.com/2017/01/14/essayyingongyuannian/" data-id="ciy8f1d5d00032wfo7jc1hznc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/历史/">历史</a></li></ul>
@@ -134,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://leiyunhe.com/2017/01/10/test/" data-id="cixwzzz6f0002cwfo38mx01sx" class="article-share-link">Share</a>
+      <a data-url="http://leiyunhe.com/2017/01/10/test/" data-id="ciy8f1d5d00012wfot7b1knaf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://leiyunhe.com/2017/01/09/hello-world/" data-id="cixwzzz5z0000cwfoikjf0pgv" class="article-share-link">Share</a>
+      <a data-url="http://leiyunhe.com/2017/01/09/hello-world/" data-id="ciy8f1d5s00072wfo9bb6fp6y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +249,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机-科普/">计算机 科普</a></li></ul>
     </div>
   </div>
 
@@ -211,7 +259,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/历史/" style="font-size: 10px;">历史</a>
+      <a href="/tags/历史/" style="font-size: 10px;">历史</a> <a href="/tags/计算机-科普/" style="font-size: 10px;">计算机 科普</a>
     </div>
   </div>
 
@@ -231,6 +279,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/01/22/DataCompression/">DataCompression</a>
+          </li>
         
           <li>
             <a href="/2017/01/14/essayyingongyuannian/">历史并不是我们所以为的那样</a>
