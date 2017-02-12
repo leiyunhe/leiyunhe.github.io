@@ -5,16 +5,16 @@
   
   <title>数据压缩是怎么回事？ | Crane Space^2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为什么要进行数据压缩？当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数">
+  <meta name="description" content="【摘要】数据压缩是计算机中的一个重要概念。如何理解数据压缩？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据压缩是怎么回事？">
 <meta property="og:url" content="http://leiyunhe.com/2017/01/22/DataCompression/index.html">
 <meta property="og:site_name" content="Crane Space^2">
-<meta property="og:description" content="为什么要进行数据压缩？当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数">
-<meta property="og:updated_time" content="2017-01-22T08:57:23.164Z">
+<meta property="og:description" content="【摘要】数据压缩是计算机中的一个重要概念。如何理解数据压缩？">
+<meta property="og:updated_time" content="2017-02-10T13:09:39.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据压缩是怎么回事？">
-<meta name="twitter:description" content="为什么要进行数据压缩？当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数">
+<meta name="twitter:description" content="【摘要】数据压缩是计算机中的一个重要概念。如何理解数据压缩？">
   
     <link rel="alternate" href="/atom.xml" title="Crane Space^2" type="application/atom+xml">
   
@@ -48,6 +48,8 @@
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">about</a>
         
       </nav>
       <nav id="sub-nav">
@@ -85,7 +87,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="为什么要进行数据压缩？"><a href="#为什么要进行数据压缩？" class="headerlink" title="为什么要进行数据压缩？"></a>为什么要进行数据压缩？</h2><p>当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数据的存储空间减小，以便能够节省存储空间、快速传递数据。</p>
+        <p>【摘要】数据压缩是计算机中的一个重要概念。如何理解数据压缩？<br><a id="more"></a></p>
+<h2 id="为什么要进行数据压缩？"><a href="#为什么要进行数据压缩？" class="headerlink" title="为什么要进行数据压缩？"></a>为什么要进行数据压缩？</h2><p>当我们需要发送一封邮件，添加一个20G的文件夹（包含很多word文档）时，邮箱提示附件太大；当我们通过QQ向朋友发送出游的数码照片时，发现文件传送非常慢；当我们需要把资料刻在光盘中，拷到的U盘时,我们发现剩余的空间不足了。这时，我们通常会尝试把文件打包压缩，也就是后缀名为rar或zip的文件。这就是数据压缩能够发挥作用的时候。采取特定的数据转换方法，将邮件附件、照片、文件等数据的存储空间减小，以便能够节省存储空间、快速传递数据。</p>
 <h2 id="如何压缩数据？"><a href="#如何压缩数据？" class="headerlink" title="如何压缩数据？"></a>如何压缩数据？</h2><p>数据压缩实现建立在现实世界数据的统计冗余基础之上。有的字符出现的频率明显更高，也有的字符几乎从不出现，如果采用同样数量的二进制位存储所有的字符，这种平均的方式显然会占用大量的空间。例如，汉语中的“的”比“得”的使用频率更高，而锝（de）出现的可能性显然非常小。这样，就会数据压缩提供了可能。“出现频率高的字尽量用最少的位数编码来表示”。通过这样的重新编码方式，能有效减少数据存储所需要的空间。</p>
 <p>例如，AAASSSDDDDDDFFFFFFF可以表示为A3S3D6F7，原来需要用19个字节表示，而后者仅仅需要8个字节来表示。当最终呈现信息的时候，就可以将A3S3D6F7转换为原始形式输出了。<br>但是，对于文本文件的压缩并不像刚才示例中那样，是同一个字母连续很多次，而是一连串单词，比如I Like Reading通过这种方式压缩以后就是I1L1i1k1e1R1e1a1d1i1n1g1,本来13个字节表示的内容，压缩以后使用了26个字节。因此，这种压缩方法就不能使用。</p>
 <p>于是，人们发现采用“哈夫曼”树进行编码能够有效解决这个问题。哈夫曼编码的特点是，为各个压缩对象分别构造最佳编码，然后以此进行压缩。压缩后的文件既包含压缩编码的规则信息，也包含压缩后的数据。</p>
@@ -97,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://leiyunhe.com/2017/01/22/DataCompression/" data-id="ciyva4hxs000418foyl6kft4o" class="article-share-link">Share</a>
+      <a data-url="http://leiyunhe.com/2017/01/22/DataCompression/" data-id="ciz2m59x7000380fo5v83gzg5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/科普/">科普</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
@@ -160,7 +163,7 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科普/">科普</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/投资/">投资</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指数基金/">指数基金</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科普/">科普</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -170,7 +173,7 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/历史/" style="font-size: 10px;">历史</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/科普/" style="font-size: 20px;">科普</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
+      <a href="/tags/历史/" style="font-size: 10px;">历史</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/指数基金/" style="font-size: 10px;">指数基金</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/科普/" style="font-size: 20px;">科普</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
   </div>
 
@@ -179,7 +182,7 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -190,6 +193,10 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/02/12/20170212-investment-summary-01/">20170212_investment_summary_01</a>
+          </li>
         
           <li>
             <a href="/2017/02/05/MenOfMathimatics1/">数学王子高斯</a>
@@ -203,18 +210,17 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
             <a href="/2017/01/14/essayyingongyuannian/">历史并不是我们所以为的那样</a>
           </li>
         
-          <li>
-            <a href="/2017/01/10/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/09/hello-world/">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
 
+  
+    <div class='widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="http://fengruibo.com/" title="一个家伙写字的地方">fengruibo</a></li>
+</ul>
+</div>
   
 </aside>
         
@@ -228,12 +234,16 @@ var duoshuoQuery = {short_name:"leiyunhelearnpython"};
     </div>
   </div>
 </footer>
+
+
     </div>
     <nav id="mobile-nav">
   
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">about</a>
   
 </nav>
     
